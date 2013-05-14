@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>PayPal - Bluefin Report</title>
+
+<!--	<link rel="stylesheet" type="text/css"	href="http://d-lhr-128671.corp.ebay.com:5080/static/euqe.css" >-->
+<!--	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>-->
+<!--	<script src="http://d-lhr-128671.corp.ebay.com:5080/static/jquery.lightbox-0.5.min.js" language="JavaScript"></script>-->
+<!--	<link rel="stylesheet" type="text/css"	href="http://d-lhr-128671.corp.ebay.com:5080/static/jquery.lightbox-0.5.css" media="screen" >-->
+	
+	<link rel="stylesheet" type="text/css"	href="../css/euqe.css" >
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.lightbox-0.5.min.js"></script>
+	<link rel="stylesheet" type="text/css"	href="../css/jquery.lightbox-0.5.css" media="screen" >
+	
+	<script type="text/javascript">
+	 $(document).ready(function(){ 
+		$('.exceptionlnk').click(function(event){
+			$(this).parent().find('div.exception').toggle();
+			parent.document.getElementById('currentFrameId').height = document['body'].offsetHeight+40;
+		});
+		
+		$('.filmStrip a').lightBox(); 
+		
+	 });
+	</script>
+	
+</head>
+
+<body>
+
+<div class='method failed'>
+	<div class="yuk_goldgrad_tl">
+		<div class="yuk_goldgrad_tr">
+			<div class="yuk_goldgrad_m"></div>
+		</div>
+	</div>
+	<h2 class="yuk_grad_ltitle_failed">description</h2>
+	<h4 class="yuk_pnl_subheading_failed">public void com.paypal.test.riskmint.pph.rqa.PPHBaseRegressionTest.checkTxnTest() throws java.lang.Exception</h4>
+	
+	<div class="yuk_pnl_content_failed">
+		Total duration of this instance run : 00 sec. <div class='leftContent' style='float: left; width: 70%;'><h3>Test Log</h3> <div class='stContainer' >class java.lang.RuntimeException:An error occured while setting up the test environment. 
+Root cause: <a  class='exceptionlnk'>(+)</a><div class='exception' style='display:none'>com.paypal.test.bluefin.platform.grid.SeleniumGridListener.beforeInvocation(SeleniumGridListener.java:132)<br/>at org.testng.internal.invokers.InvokedMethodListenerInvoker$InvokeBeforeInvocationWithoutContextStrategy.callMethod(InvokedMethodListenerInvoker.java:84)<br/>at org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:62)<br/>at org.testng.internal.Invoker.runInvokedMethodListeners(Invoker.java:606)<br/>at org.testng.internal.Invoker.invokeMethod(Invoker.java:674)<br/>at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:894)<br/>at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1219)<br/>at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br/>at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br/>at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)<br/>at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)<br/>at java.lang.Thread.run(Thread.java:722) <div class='stContainer' >class org.openqa.selenium.remote.UnreachableBrowserException:Caused by Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '2.2.1', revision: '16551', time: '2012-04-11 21:42:35'
+System info: os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0'
+Driver info: driver.version: ScreenShotRemoteWebDriver<a  class='exceptionlnk'>(+)</a><div class='exception' style='display:none'>org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:454)<br/>at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:140)<br/>at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:95)<br/>at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:103)<br/>at com.paypal.test.bluefin.platform.grid.ScreenShotRemoteWebDriver.&lt;init&gt;(ScreenShotRemoteWebDriver.java:62)<br/>at com.paypal.test.bluefin.platform.grid.ScreenShotRemoteWebDriver.createInstance(ScreenShotRemoteWebDriver.java:400)<br/>at com.paypal.test.bluefin.platform.grid.Grid.startSession(Grid.java:71)<br/>at com.paypal.test.bluefin.platform.grid.SeleniumGridListener.beforeInvocation(SeleniumGridListener.java:89)<br/>at org.testng.internal.invokers.InvokedMethodListenerInvoker$InvokeBeforeInvocationWithoutContextStrategy.callMethod(InvokedMethodListenerInvoker.java:84)<br/>at org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:62)<br/>at org.testng.internal.Invoker.runInvokedMethodListeners(Invoker.java:606)<br/>at org.testng.internal.Invoker.invokeMethod(Invoker.java:674)<br/>at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:894)<br/>at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1219)<br/>at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br/>at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br/>at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)<br/>at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)<br/>at java.lang.Thread.run(Thread.java:722) <div class='stContainer' >class java.net.UnknownHostException:Caused by bluefinlvs241.qa.paypal.com<a  class='exceptionlnk'>(+)</a><div class='exception' style='display:none'>java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)<br/>at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:866)<br/>at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1258)<br/>at java.net.InetAddress.getAllByName0(InetAddress.java:1211)<br/>at java.net.InetAddress.getAllByName(InetAddress.java:1127)<br/>at java.net.InetAddress.getAllByName(InetAddress.java:1063)<br/>at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:242)<br/>at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:130)<br/>at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:149)<br/>at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:121)<br/>at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:573)<br/>at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:425)<br/>at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:820)<br/>at org.openqa.selenium.remote.HttpCommandExecutor.fallBackExecute(HttpCommandExecutor.java:303)<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:282)<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:432)<br/>at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:140)<br/>at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:95)<br/>at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:103)<br/>at com.paypal.test.bluefin.platform.grid.ScreenShotRemoteWebDriver.&lt;init&gt;(ScreenShotRemoteWebDriver.java:62)<br/>at com.paypal.test.bluefin.platform.grid.ScreenShotRemoteWebDriver.createInstance(ScreenShotRemoteWebDriver.java:400)<br/>at com.paypal.test.bluefin.platform.grid.Grid.startSession(Grid.java:71)<br/>at com.paypal.test.bluefin.platform.grid.SeleniumGridListener.beforeInvocation(SeleniumGridListener.java:89)<br/>at org.testng.internal.invokers.InvokedMethodListenerInvoker$InvokeBeforeInvocationWithoutContextStrategy.callMethod(InvokedMethodListenerInvoker.java:84)<br/>at org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:62)<br/>at org.testng.internal.Invoker.runInvokedMethodListeners(Invoker.java:606)<br/>at org.testng.internal.Invoker.invokeMethod(Invoker.java:674)<br/>at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:894)<br/>at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1219)<br/>at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br/>at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br/>at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)<br/>at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)<br/>at java.lang.Thread.run(Thread.java:722)</div></div></div></div></div></div></div><div class='filmStripContainer' style='float: right; width: 100%;'><b>Preview</b>		<div class="filmStrip">	<ul></ul></div></div><div class='clear_both'></div>
+	</div>
+	
+	
+	<div class="yuk_pnl_footerbar">
+		<div class="yuk_pnl_footerbar_link">
+			This is a report generated by Bluefin.
+		</div>
+	</div>
+	
+	<div class="yuk_grey_bm_footer">
+		<div class="yuk_grey_br">
+			<div class="yuk_grey_bl"></div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	parent.document.getElementById('currentFrameId').height = document['body'].offsetHeight+40;
+</script>
+</body>
+</html>
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="Failed suite [Bluefin Sample Tests]" parallel="classes" data-provider-thread-count="1">
+  <parameter name="teamName" value="MINT"/>
+  <parameter name="useLocalRC" value="false"/>
+  <parameter name="browser" value="*chrome"/>
+  <parameter name="hostname" value="stage2p2292.qa.paypal.com"/>
+  <parameter name="profileName" value="StartupProfile"/>
+  <parameter name="seleniumhost" value="bluefinlvs24.qa.paypal.com"/>
+  <test name="P1(failed)" parallel="classes">
+    <groups>
+      <run>
+        <include name="regression"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.paypal.test.riskmint.pph.rqa.PPHBaseRegressionTest">
+        <methods>
+          <include name="setTestEnv"/>
+          <include name="keyTxnTest"/>
+          <include name="track2TxnTest"/>
+          <include name="track1TxnTest"/>
+          <include name="chipTxnTest"/>
+          <include name="track12TxnTest"/>
+        </methods>
+      </class> <!-- com.paypal.test.riskmint.pph.rqa.PPHBaseRegressionTest -->
+    </classes>
+  </test> <!-- P1(failed) -->
+</suite> <!-- Failed suite [Bluefin Sample Tests] -->

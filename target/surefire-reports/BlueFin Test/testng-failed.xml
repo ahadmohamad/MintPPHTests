@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" verbose="0" name="Failed suite [BlueFin Test]" parallel="classes" data-provider-thread-count="1">
+  <parameter name="executionTimeout" value="1800000"/>
+  <parameter name="performAppScan" value="false"/>
+  <parameter name="useLocalRC" value="false"/>
+  <parameter name="paypalURL" value="https://www.stage2p2400.qa.paypal.com"/>
+  <parameter name="browser" value="*firefox"/>
+  <parameter name="hostname" value="stage2p2400.qa.paypal.com"/>
+  <parameter name="calLog" value="false"/>
+  <parameter name="enableGUILogging" value="false"/>
+  <parameter name="profileName" value="SeleniumProfile"/>
+  <test name="JUNIT SUTIE(failed)" parallel="classes">
+    <classes>
+      <class name="com.paypal.test.riskmint.pph.service.ProductFlagDataAccessingTest">
+        <methods>
+          <include name="invoiceDataAccessTest"/>
+        </methods>
+      </class> <!-- com.paypal.test.riskmint.pph.service.ProductFlagDataAccessingTest -->
+    </classes>
+  </test> <!-- JUNIT SUTIE(failed) -->
+</suite> <!-- Failed suite [BlueFin Test] -->

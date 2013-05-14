@@ -1,0 +1,87 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" verbose="1" name="Bluefin Sample Tests"
+	skipfailedinvocationcounts="false" junit="false" parallel="classes"
+	data-provider-thread-count="1" annotations="JDK">
+	
+	<!-- IMPORTANT
+		  
+		These listeners are required for Bluefin. They provide Selenium 
+		connectivity and TestNG reporting enhancements. 
+	-->
+	<listeners>
+		<listener class-name="com.paypal.test.bluefin.platform.grid.SeleniumCapabilities" />
+		<listener class-name="com.paypal.test.bluefin.reports.reporter.html.BFReporter" />
+		<listener class-name="com.paypal.test.bluefin.platform.grid.SoftAssertCapabilities"/>
+	</listeners>
+
+	<!-- KEY CONCEPT
+	
+	    Place your configuration settings for this test suite here.
+	-->
+
+	<!-- optional, defaults to *firefox -->
+	<parameter name="browser" value="*firefox" />
+	<!-- optional, defaults to false -->
+	<parameter name="useLocalRC" value="false" />
+	<!-- optional, defaults no -->
+	<parameter name="profileName" value="SeleniumProfile" />
+	
+	<!-- IMPORTANT
+	
+		Required parameter for PayPal STAGE2 connections, optionally specified here. 
+		
+		Note: You should NEVER hard-code a hostname 
+		unless you have a very specific reason for it. 
+		
+		In this case the reason for setting it to a dummy 
+		value is to allow the archetype samples to run 
+		"out of the box" with 'mvn test'
+		
+		Instead, specify the the stage's hostname as a system
+		property with -DBLUEFIN_HOSTNAME=<fully_qualified_stagename>
+		either on the command line via 
+		'mvn test -DBLUEFIN_HOSTNAME=<fully_qualified_stagename>' or 
+		within the TestNG Run configuration in the section VM Arguments
+		located on the Arguments tab. 
+	-->	
+	<parameter name="hostname" value="dummy-host.sc4.paypal.com" />
+
+	<!-- KEY CONCEPT 
+	
+		Test case suite specification.
+		
+		Here we are specifying that we want to run
+		by certain groups from the @Test annotation.
+		
+		Also (commented out), we could specify to only search the
+		package com.paypal.test.sample
+		
+		Lastly, we are stating that only the test classes specified
+		should run.
+		
+		Please note: Typically, you do not specify all three conditions 
+		(groups, packages, classes). Furthermore, it could lead to unexpected
+		errors 
+	-->
+	<test verbose="2" name="P1" annotations="JDK">
+		<groups>
+			<run>
+				<include name="pass" />
+				<include name="fail" />
+				<include name="dependencytest" />
+				<include name="datatest" />
+				<include name="webtest" />
+			</run>
+		</groups>
+		<!-- packages>
+			<package name="com.paypal.test.sample"></package>
+		</packages -->
+		<classes>
+			<class name="com.paypal.test.sample.testng.Demo1Test"></class>
+			<class name="com.paypal.test.sample.testng.Demo2Test"></class>
+			<class name="com.paypal.test.sample.testng.Demo3Test"></class>
+			<class name="com.paypal.test.sample.testng.Demo4Test"></class>
+			<class name="com.paypal.test.sample.testng.Demo5Test"></class>
+		</classes>
+	</test>
+</suite>

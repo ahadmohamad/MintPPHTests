@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="Failed suite [BlueFin Test]" parallel="classes" data-provider-thread-count="1">
+  <parameter name="teamName" value="MINT"/>
+  <parameter name="performAppScan" value="false"/>
+  <parameter name="executionTimeout" value="1800000"/>
+  <parameter name="useLocalRC" value="yes"/>
+  <parameter name="paypalURL" value="https://www.stage2p2400.qa.paypal.com"/>
+  <parameter name="browser" value="*iexplore"/>
+  <parameter name="hostname" value="stage2p2400.qa.paypal.com"/>
+  <parameter name="calLog" value="false"/>
+  <parameter name="enableGUILogging" value="false"/>
+  <parameter name="profileName" value="SeleniumProfile"/>
+  <test name="Default test(failed)" parallel="classes" preserve-order="true">
+    <parameter name="teamName" value="MINT"/>
+    <parameter name="performAppScan" value="false"/>
+    <parameter name="executionTimeout" value="1800000"/>
+    <parameter name="useLocalRC" value="yes"/>
+    <parameter name="paypalURL" value="https://www.stage2p2400.qa.paypal.com"/>
+    <parameter name="browser" value="*iexplore"/>
+    <parameter name="hostname" value="stage2p2400.qa.paypal.com"/>
+    <parameter name="calLog" value="false"/>
+    <parameter name="enableGUILogging" value="false"/>
+    <parameter name="profileName" value="SeleniumProfile"/>
+    <classes>
+      <class name="com.paypal.test.riskmint.pph.ukbond.RiskUKBondTest">
+        <methods>
+          <include name="riskUKBondTest"/>
+        </methods>
+      </class> <!-- com.paypal.test.riskmint.pph.ukbond.RiskUKBondTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [BlueFin Test] -->

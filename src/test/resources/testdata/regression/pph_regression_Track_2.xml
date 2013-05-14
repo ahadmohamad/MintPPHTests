@@ -1,0 +1,90 @@
+<ASF_Service_RequestVO typesig="ffffffffa0a11514"
+	id="1">
+	<client_version type="String">1.0</client_version>
+	<service type="String">AcquiringServ</service>
+	<params typesig="21f507c05b06ec4c" type="Merchant::DoDirectPaymentInternalRequest"
+		id="2">
+		<basic_dcc_request typesig="4683e7bdffb"
+			type="Merchant::DoDirectPaymentRequestVO" id="3">
+			<payment typesig="36269104" type="Merchant::NVPPayment" id="4">
+				<amt type="String">15</amt>
+				<itemamt type="String">15</itemamt>
+				<!--invnum type="String">INV2-APZ5-E6AT-8L9O-8J1H</invnum -->
+				<currencycode type="String">USD</currencycode>
+			</payment>
+			<credit_card_details typesig="7e801edf"
+				type="Merchant::NVPCreditCardDetails" id="5">
+				<creditcardtype type="String">Visa</creditcardtype>
+				<expdate type="ulong">122015</expdate>
+				<acct type="String">4417119664813281</acct><!--acct type="String">6011905000000004</acct -->
+				<cvv2 type="String">123</cvv2>
+			</credit_card_details>
+			<paymentaction type="String">Sale</paymentaction>
+			<ipaddress type="String">10.244.244.103</ipaddress>
+		</basic_dcc_request>
+		<swipe_indicator type="ulong">3</swipe_indicator>
+		<acquiring_feature_id type="sint8">77
+		</acquiring_feature_id>
+		<!--merchant_id type="String">LM6WE8F2X4QCN</merchant_id -->
+		<merchant_id type="String">FGCT6WC2J356S</merchant_id>
+		<actor_info typesig="fffff5341d8bfa0c" type="Common::ActorInfoVO"
+			id="6">
+			<!--actor_type type="sint8">8</actor_type> <actor_account_number type="ullong">2202550735709142044</actor_account_number> 
+				<actor_id type="ullong">2202550735709142044</actor_id -->
+			<actor_session_id type="String">SeH7hAO5PAIA
+			</actor_session_id>
+			<actor_ip_addr type="String">10.244.244.103</actor_ip_addr>
+		</actor_info>
+		<card_present_request typesig="22082dd04c65de53"
+			type="Merchant::CardPresentRequestVO" id="7">
+			<card_data typesig="d1d4b1b386154b57" type="Merchant::CardDataVO"
+				id="sudo -8">
+				<card_present_storable_data typesig="fffffa80a7abd4fc"
+					type="FinSys::CardPresentStorableVO" id="9">
+					<card_present_data_info typesig="ffffffff949d68f0"
+						type="FinSys::CardPresentDataInfoVO" id="10">
+						<pin_present type="bool">true</pin_present>
+						<signature_present type="bool">true</signature_present>
+						<card_present type="String">Track_2</card_present>
+						<fallback_swipe type="bool">true</fallback_swipe>
+					</card_present_data_info>
+					<device_capability repeating="true" type="String">
+						<item>Key</item>
+						<item>Image</item>
+						<item>Swipe</item>
+						<item>Chip</item>
+					</device_capability>
+					<local_date_time typesig="17eb9902" type="FinSys::DateTimeVO"
+						id="11">
+						<month type="uint8">5</month>
+						<timezone_oslon type="String">GMT+00:00</timezone_oslon>
+						<timezone_code type="String">GMT+00:00</timezone_code>
+						<offset type="int">0</offset>
+						<unix_time type="ullong">1341013523161</unix_time>
+						<second type="uint8">10</second>
+						<minute type="uint8">30</minute>
+						<hour type="uint8">9</hour>
+						<day type="uint8">9</day>
+						<year type="uint">2012</year>
+					</local_date_time>
+					<device_serial_number type="String"></device_serial_number>
+				</card_present_storable_data>
+				<card_present_pci_sensitive_data
+					typesig="ffffcf96b6615191" type="FinSys::CardPresentPCISensitiveVO"
+					id="12">
+					<card_present_data_info_pci ref_id="10" />
+					<track_1_encoded type="Buffer">NDc2MTczOTAwMTAxMDI2Nw
+					</track_1_encoded><!--track_1_encoded type="Buffer">B6011905000000004^DISCOVER 
+						GIFT TEST CARD^160410123456789</track_1_encoded -->
+				</card_present_pci_sensitive_data>
+			</card_data>
+		</card_present_request>
+		<skip_fmf type="bool">true</skip_fmf>
+	</params>
+	<client_pid type="int">9016</client_pid>
+	<operation type="String">DoDirectPaymentInternal</operation>
+	<correlation_id type="String">3a8d93eb279e4</correlation_id>
+	<client_ip type="String">10.244.37.38</client_ip>
+</ASF_Service_RequestVO>
+
+
